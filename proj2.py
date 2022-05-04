@@ -40,6 +40,16 @@ def nuvol3 ():
         arcade.draw_circle_filled(545, 395, 30, arcade.csscolor.WHITE)
         arcade.draw_circle_filled(515, 390, 30, arcade.csscolor.WHITE)
 
+def lago ():
+        arcade.draw_ellipse_filled(160, 100, 200, 90, arcade.csscolor.BLUE, 3)
+        arcade.draw_ellipse_filled(170, 130, 210, 90, arcade.csscolor.BLUE, 3)
+        arcade.draw_ellipse_filled(190, 115, 210, 90, arcade.csscolor.BLUE, 3)
+        arcade.draw_ellipse_filled(140, 115, 210, 90, arcade.csscolor.BLUE, 3)
+        arcade.draw_ellipse_filled(130, 100, 100, 125, arcade.csscolor.BLUE, 3)
+
+def sol ():
+        arcade.draw_circle_filled(100, 430, 50, arcade.csscolor.YELLOW)
+
 
 class Ball:
     """ This class manages a ball bouncing on the screen. """
@@ -139,24 +149,26 @@ class MyGame(arcade.Window):
    
 
                 # Attributes to store where our ball is
-        self.ball = Gel(50, 50, 0, -4, 5, arcade.color.WHITE)
-        self.ball2 = Gel(150, 50, 0, -5, 5, arcade.color.WHITE)
-        self.ball3 = Gel(20, 50, 0, -5, 5, arcade.color.WHITE)
-        self.ball4 = Gel(250, 50, 0, -4, 5, arcade.color.WHITE)
-        self.ball5 = Gel(280, 50, 0, -5, 5, arcade.color.WHITE)
-        self.ball6 = Gel(310, 50, 0, -6, 5, arcade.color.WHITE)
-        self.ball7 = Gel(350, 50, 0, -5, 5, arcade.color.WHITE)
-        self.ball8 = Gel(400, 50, 0, -7, 5, arcade.color.WHITE)
-        self.ball9 = Gel(450, 50, 0, -5, 5, arcade.color.WHITE)
-        self.ball10 = Gel(540, 50, 0, -4, 5, arcade.color.WHITE)
-        self.ball11 = Gel(590, 50, 0, -6, 5, arcade.color.WHITE)
+        self.ball = Gel(50, 50, 0, -4, 2, arcade.color.BLUE)
+        self.ball2 = Gel(150, 50, 0, -5, 2, arcade.color.BLUE)
+        self.ball3 = Gel(20, 50, 0, -4.5, 2, arcade.color.BLUE)
+        self.ball4 = Gel(250, 50, 0, -4.6, 2, arcade.color.BLUE)
+        self.ball5 = Gel(280, 50, 0, -5.5, 2, arcade.color.BLUE)
+        self.ball6 = Gel(310, 50, 0, -6, 2, arcade.color.BLUE)
+        self.ball7 = Gel(350, 50, 0, -5.3,2, arcade.color.BLUE)
+        self.ball8 = Gel(400, 50, 0, -7, 2, arcade.color.BLUE)
+        self.ball9 = Gel(450, 50, 0, -5.2, 2, arcade.color.BLUE)
+        self.ball10 = Gel(540, 50, 0, -4.2, 2, arcade.color.BLUE)
+        self.ball11 = Gel(590, 50, 0, -6.2, 2, arcade.color.BLUE)
 
     def on_draw(self):
         """ Called whenever we need to draw the window. """
         arcade.start_render()
         cielo()
         suelo()
-        arbre(180,180)
+        lago ()
+        arbre(450,150)
+        sol ()
         nuvol()
         nuvol2()
         nuvol3()
